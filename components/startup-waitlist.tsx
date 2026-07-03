@@ -1,0 +1,174 @@
+"use client";
+
+import { useState } from "react";
+import Reveal from "@/components/reveal";
+import { Field, PillGroup, inputClass } from "@/components/form";
+
+const STAGES = ["Idea", "MVP", "Launched", "Funded"];
+const BUILDER_TYPES = [
+  "Content",
+  "DevRel",
+  "Product Marketing",
+  "Design",
+  "Engineering",
+];
+
+export default function StartupWaitlist() {
+  const [stage, setStage] = useState<string[]>([]);
+  const [types, setTypes] = useState<string[]>([]);
+
+  return (
+    <section id="waitlist" className="border-t border-hairline py-22 md:py-32">
+      <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+        <div className="grid grid-cols-12 items-start gap-x-8 gap-y-14">
+          {/* Copy + supporting status block */}
+          <div className="col-span-12 lg:col-span-5">
+            <Reveal>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-secondary">
+                For startups
+              </p>
+              <h2 className="mt-5 font-display text-4xl font-medium leading-[1.08] tracking-tight md:text-5xl">
+                Get early access to Public Builders.
+              </h2>
+              <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-ink-secondary">
+                We are onboarding a small group of early startups first. Join
+                the waitlist to hire Public Builders who understand your
+                product and turn its progress into public momentum.
+              </p>
+            </Reveal>
+            <Reveal delay={120}>
+              <div className="mt-10 rounded-[4px] border border-hairline">
+                <div className="grid-texture flex items-center justify-between border-b border-hairline px-4 py-3">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-ink-secondary">
+                    Early access · Batch 01
+                  </span>
+                  <span className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em] text-ink-secondary">
+                    <span
+                      className="h-1.5 w-1.5 rounded-full bg-amber"
+                      aria-hidden="true"
+                    />
+                    Onboarding
+                  </span>
+                </div>
+                <dl className="divide-y divide-hairline px-4 font-mono text-[11px]">
+                  <div className="flex justify-between py-2.5">
+                    <dt className="uppercase tracking-[0.12em] text-ink-secondary/80">
+                      Startup slots
+                    </dt>
+                    <dd className="text-ink">25</dd>
+                  </div>
+                  <div className="flex justify-between py-2.5">
+                    <dt className="uppercase tracking-[0.12em] text-ink-secondary/80">
+                      Review window
+                    </dt>
+                    <dd className="text-ink-secondary">Within 1 week</dd>
+                  </div>
+                  <div className="flex justify-between py-2.5">
+                    <dt className="uppercase tracking-[0.12em] text-ink-secondary/80">
+                      Next step
+                    </dt>
+                    <dd className="text-ink-secondary">Intro call, then match</dd>
+                  </div>
+                </dl>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Form */}
+          <div className="col-span-12 lg:col-span-7">
+            <Reveal delay={80}>
+              <form
+                className="space-y-8 rounded-[4px] border border-hairline p-6 md:p-8"
+                onSubmit={(e) => e.preventDefault()}
+              >
+                <div className="grid gap-8 sm:grid-cols-2">
+                  <Field label="Startup name" htmlFor="w-name">
+                    <input
+                      id="w-name"
+                      type="text"
+                      placeholder="Acme Systems"
+                      className={inputClass}
+                    />
+                  </Field>
+                  <Field label="Website" htmlFor="w-site">
+                    <input
+                      id="w-site"
+                      type="url"
+                      placeholder="acme.dev"
+                      className={inputClass}
+                    />
+                  </Field>
+                </div>
+                <Field label="What are you building?" htmlFor="w-building">
+                  <textarea
+                    id="w-building"
+                    rows={3}
+                    placeholder="One or two sentences on the product and who it is for."
+                    className={inputClass}
+                  />
+                </Field>
+                <Field label="Stage">
+                  <PillGroup
+                    label="Stage"
+                    options={STAGES}
+                    selected={stage}
+                    onToggle={(option) => setStage([option])}
+                  />
+                </Field>
+                <Field
+                  label="What kind of public momentum do you want?"
+                  htmlFor="w-momentum"
+                >
+                  <textarea
+                    id="w-momentum"
+                    rows={3}
+                    placeholder="Launch buzz, weekly demos, a build-in-public presence, developer trust."
+                    className={inputClass}
+                  />
+                </Field>
+                <Field label="Preferred Public Builder type">
+                  <PillGroup
+                    label="Preferred Public Builder type"
+                    options={BUILDER_TYPES}
+                    selected={types}
+                    onToggle={(option) =>
+                      setTypes((prev) =>
+                        prev.includes(option)
+                          ? prev.filter((t) => t !== option)
+                          : [...prev, option],
+                      )
+                    }
+                  />
+                </Field>
+                <div className="grid gap-8 sm:grid-cols-2">
+                  <Field label="Budget range" htmlFor="w-budget">
+                    <input
+                      id="w-budget"
+                      type="text"
+                      placeholder="$1,500 to $3,000 / month"
+                      className={inputClass}
+                    />
+                  </Field>
+                  <Field label="Founder email" htmlFor="w-email">
+                    <input
+                      id="w-email"
+                      type="email"
+                      placeholder="you@acme.dev"
+                      className={inputClass}
+                    />
+                  </Field>
+                </div>
+                <button
+                  type="submit"
+                  className="rounded-[4px] bg-accent px-5 py-3 font-mono text-xs font-medium uppercase tracking-[0.15em] text-canvas transition-opacity duration-[120ms] ease-signature hover:opacity-85"
+                >
+                  Join Startup Waitlist
+                </button>
+              </form>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
