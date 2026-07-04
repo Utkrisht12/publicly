@@ -154,8 +154,8 @@ export default function BuilderApplication() {
                 Become a Public Builder.
               </h2>
               <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-ink-secondary">
-                Work with early startups, understand real products deeply, get
-                paid, and turn your work into a public portfolio.
+                Join startups early, understand what they are building, and turn
+                real progress into a public portfolio.
               </p>
             </Reveal>
             <Reveal delay={120}>

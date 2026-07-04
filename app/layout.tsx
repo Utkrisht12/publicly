@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Publicly: Hire Public Builders",
   description:
-    "Hire technically fluent creators who embed with your team and turn every week of progress into public marketing.",
+    "Hire Public Builders who embed with your team and turn weekly progress into demos, build logs, short videos, and launch momentum.",
 };
 
 export default function RootLayout({

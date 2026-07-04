@@ -92,10 +92,9 @@ export default function Hero() {
               We help startups turn building into marketing.
             </h1>
             <p className="mt-5 max-w-[60ch] text-base leading-relaxed text-ink-secondary md:text-lg">
-              Hire Public Builders who embed with your team, understand your
-              product deeply, and turn every week of progress into demos,
-              videos, and launch momentum, getting hands-on where it counts so
-              the content is always real.
+              Public Builders embed with your team, understand what you are
+              shipping, and turn weekly progress into demos, build logs, short
+              videos, and launch momentum.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -112,8 +111,8 @@ export default function Hero() {
               </a>
             </div>
             <p className="mt-5 font-mono text-[11px] text-ink-secondary">
-              Early access opening soon for selected startups and Public
-              Builders.
+              Early access is opening soon for startups ready to build in public
+              and Public Builders ready to join them.
             </p>
           </div>
 
@@ -164,7 +163,7 @@ export default function Hero() {
               </ul>
             </div>
             <p className="mt-3 text-right font-mono text-[11px] uppercase tracking-[0.15em] text-ink-secondary">
-              Builder activity, refreshed all day
+              Real progress, turned into public updates
             </p>
           </div>
         </div>

@@ -78,19 +78,19 @@ export default function WhatIsAPublicBuilder() {
               id="what-is-a-public-builder"
               className="mt-5 font-display text-4xl font-medium leading-[1.08] tracking-tight md:text-5xl"
             >
-              A Public Builder is not just an influencer and not just a
-              freelance marketer.
+              A Public Builder is embedded with your team, close enough to
+              understand the product, and visible enough to turn progress into
+              public momentum.
             </h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-ink-secondary md:text-lg">
               A Public Builder embeds with your team, understands the product
               well enough to talk about it honestly, and spends most of their
               time turning your progress into demos, build logs, short videos,
-              and launch updates. They get hands-on with the product where it
-              counts, so the content is never faked from the outside.
+              and launch updates.
             </p>
             <p className="mt-8 border-l border-hairline pl-5 text-sm leading-relaxed text-ink md:text-base">
-              Only the Public Builder is both credible enough to get the
-              product right and embedded enough to move with your team.
+              Not an influencer. Not a freelance marketer. A Public Builder
+              works close to the team and makes the work visible.
             </p>
           </div>
 
@@ -211,7 +211,7 @@ export default function WhatIsAPublicBuilder() {
               className={`mt-3 font-mono text-[11px] uppercase tracking-[0.15em] text-ink-secondary ${reveal()}`}
               style={{ transitionDelay: inView ? "440ms" : undefined }}
             >
-              Fig. 01: only one role clears all three
+              Fig. 01: embedded enough to understand, public enough to create momentum
             </p>
           </div>
         </div>

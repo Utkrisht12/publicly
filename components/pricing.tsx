@@ -12,7 +12,7 @@ const PACKAGES: Package[] = [
   {
     name: "Pilot Sprint",
     price: "$1,500 to $3,000 / month",
-    blurb: "One Public Builder embedded with your team, posting every week.",
+    blurb: "One Public Builder embedded with your team, turning weekly progress into posts, demos, and short-form content.",
     features: [
       "1 Public Builder",
       "10 to 20 hrs/week",
@@ -27,7 +27,7 @@ const PACKAGES: Package[] = [
   {
     name: "Launch Sprint",
     price: "$5,000 to $8,000 / month",
-    blurb: "A small builder team running your launch window at full volume.",
+    blurb: "A small Public Builder team turning your launch window into demos, updates, clips, and momentum.",
     features: [
       "2 to 3 Public Builders",
       "More frequent content",
@@ -58,7 +58,7 @@ export default function Pricing() {
               </h2>
             </div>
             <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-dark-ink/60">
-              30-day pilots · no retainers
+              30-day pilots. No retainers.
             </p>
           </div>
         </Reveal>

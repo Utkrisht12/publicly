@@ -230,7 +230,7 @@ export default function FeaturedBuilders() {
                   ))}
                 </div>
                 <p className="mt-3 font-mono text-[11px] text-ink-secondary">
-                  Gets hands-on where it counts.
+                  Understands the product. Makes the progress visible.
                 </p>
                 <dl className="mt-4 divide-y divide-hairline border-t border-hairline font-mono text-[11px]">
                   <div className="flex justify-between gap-3 py-2">

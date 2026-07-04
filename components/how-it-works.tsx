@@ -10,15 +10,15 @@ const TRACKS: { label: string; steps: Step[] }[] = [
     label: "Track 01 / For startups",
     steps: [
       {
-        title: "Tell us what you are building.",
+        title: "Share what you are building.",
         body: "Share your product, stage, and the kind of public momentum you want.",
       },
       {
-        title: "Get matched.",
+        title: "Match with a Public Builder.",
         body: "We pair you with a Public Builder who can understand your product and turn its progress into content.",
       },
       {
-        title: "Ship in public.",
+        title: "Turn weekly progress into public momentum.",
         body: "They embed in your workflow, create demos, post updates, and turn progress into distribution.",
       },
     ],
@@ -27,15 +27,15 @@ const TRACKS: { label: string; steps: Step[] }[] = [
     label: "Track 02 / For Public Builders",
     steps: [
       {
-        title: "Apply.",
+        title: "Apply to become a Public Builder.",
         body: "Show your content, previous work, and your technical fluency.",
       },
       {
-        title: "Get matched.",
+        title: "Embed with a startup.",
         body: "We connect you with early startups that need your content style and credibility.",
       },
       {
-        title: "Build your portfolio publicly.",
+        title: "Build your public portfolio through real work.",
         body: "Get paid, work with real products, and create visible proof of work.",
       },
     ],
